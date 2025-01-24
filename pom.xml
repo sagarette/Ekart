@@ -27,7 +27,7 @@
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
     <sonar.language>java</sonar.language>
-    <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>         
+    <!--<maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>-->         
     </properties>
 
     <dependencies>
