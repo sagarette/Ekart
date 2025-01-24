@@ -27,7 +27,7 @@
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
     <sonar.language>java</sonar.language>
-    <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>         
+    <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>         
     </properties>
 
     <dependencies>
@@ -129,12 +129,13 @@
              <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20.1</version>
                 <configuration>
-                    <classpathDependencyExcludes>
-                        <classpathDependencyExclude>org.springframework.boot:spring-boot-starter-tomcat</classpathDependencyExclude>
-                    </classpathDependencyExcludes>
-                </configuration>
-            </plugin>     
+                    <additionalClasspathElements>
+                      <additionalClasspathElement>${basedir}/src/test/resources</additionalClasspathElement>
+                    </additionalClasspathElements>
+                </configuration>   
+             </plugin>        
 
                  <plugin>
     <groupId>org.jacoco</groupId>
